@@ -1,0 +1,9 @@
+              precision    recall  f1-score   support
+
+       crack      0.764     0.720     0.741       175
+missing-head      0.860     0.799     0.828       169
+   paint-off      0.505     0.632     0.561        87
+
+    accuracy                          0.733       431
+   macro avg      0.709     0.717     0.710       431
+weighted avg      0.749     0.733     0.739       431
