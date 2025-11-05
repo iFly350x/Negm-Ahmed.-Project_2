@@ -14,8 +14,7 @@ This project builds and compares two deep convolutional neural networks (DCNNs) 
 ---
 
 ## 2) Repository Structure
-
-.
+```bash
 ├── main.py                  # Steps 1–4: data, models, hyperparams, evaluation, figures
 ├── step5_test.py            # Step 5: load saved model + predict 3 required test images
 ├── artifacts/               # (created) saved model + class_indices.json
