@@ -1,14 +1,18 @@
 # AER850 – Project #2 (DCNN)
 # Ahmed Negm | 501101640
 
+import os
+import json
 from pathlib import Path
 from typing import Tuple
+
+
 import numpy as np
+import matplotlib.pyplot as plt
+
 from tensorflow import keras
-from tensorflow.keras import layers
+from tensorflow.keras import layers, models, optimizers, backend as K
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras import backend as K
-from sklearn.metrics import f1_score, classification_report, confusion_matrix
 
 
 # Global Parameters
@@ -195,8 +199,6 @@ def preview_pipeline():
     # In Step 3 i will add: early stopping, fit(), and the accuracy/loss plots.
 
 
-from tensorflow.keras import layers, models, optimizers
-
 # 3.1 Activation helper (as discussed in lecture)
 def get_activation(name: str):
     if name == "relu":
@@ -318,9 +320,7 @@ WIDER_DENSE    = ("relu",       "relu", (32, 64),       256, 5e-4)  # wider clas
 
 
 # Step 4 — Model Evaluation (Figure 2 style)
-import os
-import numpy as np
-import matplotlib.pyplot as plt
+
 
 def step4_model_evaluation(history, model, valid_gen, out_dir="figures"):
     """
@@ -485,7 +485,7 @@ if __name__ == "__main__":
         restore_best_weights=True
     )
 
-    # Choose ONE config
+    # These are all the configuratoins I used for the expoirements
     # CFG = BASELINE_CFG
     # CFG = DEEPER_CFG
     CFG = LEAKY_CONV_CFG
@@ -499,14 +499,14 @@ if __name__ == "__main__":
     # Eval + plots (learning curves)
     eval_summary = step4_model_evaluation(history, model, valid_gen, out_dir="figures")
 
-    # NEW: Confusion matrix + F1 on validation
+    # adding Confusion matrix + F1 on validation
     metrics = step4_confusion_and_f1(model, valid_gen, class_indices, out_dir="figures")
     print(f"Macro-F1={metrics['macro_f1']:.3f} | Weighted-F1={metrics['weighted_f1']:.3f}")
 
     # Save artifacts for Step 5 (model + label map)
     save_artifacts(model, class_indices)
 
-    # Optional: training curves again (standalone)
+    # adding training curves again (standalone)
     plot_history(history, title=f"({model.name})")
 
     
