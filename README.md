@@ -1,6 +1,7 @@
 # AER850 – Project #2 (DCNN)
 **Aircraft Skin Defect Classification (crack / missing-head / paint-off)**  
 **Author:** Ahmed Negm · **ID:** 501101640
+** Trained Model can be found at https://drive.google.com/file/d/1MSVKj-16RS-fRhj71F2g1WvRe4m7TiA0/view?usp=sharing
 
 ---
 
@@ -10,6 +11,7 @@ This project builds and compares two deep convolutional neural networks (DCNNs) 
 - **Final selected model:** LeakyReLU in conv blocks + ReLU in dense (filters **32–64**, Dense=**128**, Dropout=**0.30**, Adam **1e-3**).  
 - **Validation:** ~**0.733** accuracy, macro-F1 ≈ **0.710** at EarlyStopping epoch ≈ **11** (gap ≈ **+0.026**).  
 - **Known edge case:** **crack ↔ paint-off** under strong highlights.
+
 
 ---
 
