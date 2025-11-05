@@ -1,0 +1,6 @@
+# AER850 – Project #2 (DCNN) — minimal deps
+tensorflow
+scikit-learn
+numpy
+matplotlib
+pillow
