@@ -1,4 +1,4 @@
-# AER850 – Project #2 (DCNN) — minimal deps
+# AER850 – Project #2 (DCNN) 
 tensorflow
 scikit-learn
 numpy
