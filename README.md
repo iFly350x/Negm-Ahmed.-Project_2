@@ -48,7 +48,7 @@ This project builds and compares two deep convolutional neural networks (DCNNs) 
 
 
 yaml
-Copy code
+
 
 ---
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 4) Data Layout (must match)
 markdown
-Copy code
+
 Data/
 ├─ train/
 │  ├─ crack/          *.jpg...
@@ -100,7 +100,7 @@ artifacts/<model>_best.keras and artifacts/class_indices.json
 
 B) Step 5 (test-time predictions with overlays)
 bash
-Copy code
+
 python step5_test.py
 Inputs: loads artifacts/CNN_f32-64_d128_leaky_relu_relu_best.keras and the 3 test images.
 Outputs: overlay images in predictions/:
