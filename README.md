@@ -1,6 +1,6 @@
 # AER850 – Project #2 (DCNN)
 **Aircraft Skin Defect Classification (crack / missing-head / paint-off)**  
-**Author:** Ahmed Negm · **ID:** 501101640
+**Author:** Ahmed Negm ·
 ** Trained Model can be found at https://drive.google.com/file/d/1MSVKj-16RS-fRhj71F2g1WvRe4m7TiA0/view?usp=sharing
 
 ---
