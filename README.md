@@ -14,34 +14,39 @@ This project builds and compares two deep convolutional neural networks (DCNNs) 
 ---
 
 ## 2) Repository Structure
+
 .
-├─ main.py # Steps 1–4: data, models, hyperparams, evaluation, figures
-├─ step5_test.py # Step 5: load saved model + predict 3 required test images
-├─ artifacts/ # (created) saved model + class_indices.json
-│ ├─ CNN_f32-64_d128_leaky_relu_relu_best.keras
-│ └─ class_indices.json
-├─ figures/ # (created) learning curves + confusion matrix + reports
-│ ├─ figure2_model_performance_.png
-│ ├─ confusion_matrix_.png
-│ └─ classification_report_*.txt
-├─ predictions/ # (created) probability-overlay PNGs for test images
-│ ├─ pred_crack.png
-│ ├─ pred_missing-head.png
-│ └─ pred_paint-off.png
-├─ Data/ # dataset root (see layout below)
-│ ├─ train/
-│ │ ├─ crack/ ...
-│ │ ├─ missing-head/ ...
-│ │ └─ paint-off/ ...
-│ ├─ valid/
-│ │ ├─ crack/ ...
-│ │ ├─ missing-head/ ...
-│ │ └─ paint-off/ ...
-│ └─ test/
-│ ├─ crack/test_crack.jpg
-│ ├─ missing-head/test_missinghead.jpg
-│ └─ paint-off/test_paintoff.jpg
-└─ requirements.txt # minimal deps (optional; see below)
+├── main.py                  # Steps 1–4: data, models, hyperparams, evaluation, figures
+├── step5_test.py            # Step 5: load saved model + predict 3 required test images
+├── artifacts/               # (created) saved model + class_indices.json
+│   ├── CNN_f32-64_d128_leaky_relu_relu_best.keras
+│   └── class_indices.json
+├── figures/                 # (created) learning curves + confusion matrix + reports
+│   ├── figure2_model_performance_*.png
+│   ├── confusion_matrix_*.png
+│   └── classification_report_*.txt
+├── predictions/             # (created) probability-overlay PNGs for test images
+│   ├── pred_crack.png
+│   ├── pred_missing-head.png
+│   └── pred_paint-off.png
+├── Data/                    # dataset root (see layout below)
+│   ├── train/
+│   │   ├── crack/
+│   │   ├── missing-head/
+│   │   └── paint-off/
+│   ├── valid/
+│   │   ├── crack/
+│   │   ├── missing-head/
+│   │   └── paint-off/
+│   └── test/
+│       ├── crack/
+│       │   └── test_crack.jpg
+│       ├── missing-head/
+│       │   └── test_missinghead.jpg
+│       └── paint-off/
+│           └── test_paintoff.jpg
+└── requirements.txt         # minimal deps
+
 
 yaml
 Copy code
